@@ -1,5 +1,15 @@
-/* .button{
+.button{
   padding: 10px ;
   background-color: rgb(38, 121, 137);
   color: white;
-} */
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  min-width: 150px;
+  width: auto;
+  display: block;
+  transition: .2s;
+  &:hover{
+    transform: translateY(-5px);
+  }
+}

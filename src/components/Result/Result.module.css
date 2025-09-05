@@ -1,0 +1,9 @@
+.result{
+  display: grid;
+  place-items: center;
+  color: #707676;
+  .resultHighlight{
+    font-weight: bold;
+    font-size: 30px;
+  }
+}

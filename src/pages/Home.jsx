@@ -1,10 +1,12 @@
 import Button from "../components/Button/Button"
+import { ROUTES_PATH } from "../const"
 
 function Home() {
   return (
     <>
-      <h1>Home</h1>
-      <Button to="/sample-page">Sample Pageへ</Button>
+      <h1 className="text-[#707676]">HAIR & MAKE QUIZ</h1>
+      <br />
+      <Button to={ROUTES_PATH.QUIZ}>START!!</Button>
     </>
   )
 }
