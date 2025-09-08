@@ -16,7 +16,7 @@ export default function AnswerList({quizDate, selectedAnswers}) {
         <p className={styles.answer}><span className={styles.label}>回答</span> {q.options[userIdx] ?? "未回答"}</p>
         <p><span className={styles.label}>正解</span> {q.options[correctIdx]}</p>
         <p className={`text-end ${styles.judgement}`}>{isCorrect ? "〇 正解" : "× 不正解"}</p>
-        <p className="mt-10">{q.explanation}</p>
+        <p className="mt-7">{q.explanation}</p>
 
       </li>
       );
