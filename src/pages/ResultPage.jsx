@@ -11,6 +11,8 @@ const [active, setActive] = useState(false);
 const location = useLocation();
 const maxQuizLen = location.state.maxQuizLen;
 const correctNumLen = location.state.correctNumLen;
+const {state} = useLocation() || {};
+// state: { maxQuizLen, correctNumLen, selectedAnswers }
 
 useEffect(() =>{
   setTimeout(() => setActive(true),2000);
@@ -19,11 +21,11 @@ useEffect(() =>{
   return (
     <>
     <Loading active={active}/>
-      <div className="text-[#707676] text-base">- Result -</div>
+      <div className="text-base">- Result -</div>
       <br />
       <Result maxQuizLen={maxQuizLen} correctNumLen={correctNumLen}/>
       <br />
-      <Button to={ROUTES_PATH.DETAIL}>詳しく見る</Button>
+      <Button to={ROUTES_PATH.DETAIL} state={state}>詳しく見る</Button>
       <Button to={ROUTES_PATH.HOME}>もう一回！</Button>
     </>
   )

@@ -4,6 +4,7 @@ import Home from "./pages/Home"
 import QuizPage from "./pages/QuizPage"
 import ResultPage from "./pages/ResultPage"
 import "./App.css";
+import DetailPage from "./pages/DetailPage"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path={ROUTES_PATH.HOME} element={<Home/>} />
         <Route path={ROUTES_PATH.QUIZ} element={<QuizPage/>} />
         <Route path={ROUTES_PATH.RESULT} element={<ResultPage/>} />
+        <Route path={ROUTES_PATH.DETAIL} element={<DetailPage/>} />
       </Routes>
     </BrowserRouter>
   )

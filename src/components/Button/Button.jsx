@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom"
 import styles from "./Button.module.css";
-function Button({ to, children, onClick }) {
+
+function Button({ to, children, onClick, state ,variant}) {
+  const classNames = [styles.button];
+  if (variant === "quiz") classNames.push(styles.quizButton);
+
   // `to` が渡されてたら Link として動く
   if (to) {
     return (
       <Link
-        to={to}
-        className={styles.button}
+        to={to} state={state}
+      className={classNames.join(" ")}
       >
         {children}
       </Link>
@@ -16,7 +20,7 @@ function Button({ to, children, onClick }) {
   // 通常のボタン
   return (
     <button
-      className={styles.button}
+    className={classNames.join(" ")}
       type="button" onClick={onClick}
     >
       {children}
