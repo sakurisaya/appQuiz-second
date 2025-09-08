@@ -13,14 +13,15 @@
   }
 }
 .judgement{
-  font-size: 1.2em;
+  margin-top: 1em;
+  font-size: 1em;
   background: #fff;
   color: #d94683;
   font-weight: 600;
   width: fit-content;
   margin-left: auto;
   padding: 1% 2%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .correct{
   color: #267989;
@@ -34,8 +35,8 @@
   background: #498c99;
 }
 .question{
-  font-weight: 600;
-  font-size: 1.2rem;
+  /* font-weight: 600; */
+  font-size: 1.1rem;
   margin-bottom: 10px
 }
 .label{
