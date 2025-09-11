@@ -1,8 +1,0 @@
-.result{
-  display: grid;
-  place-items: center;
-  .resultHighlight{
-    font-weight: bold;
-    font-size: 30px;
-  }
-}
