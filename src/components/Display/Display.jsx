@@ -1,7 +1,6 @@
 // 問題タイトル
-import styles from "./Display.module.css";
 export default function Display({children}) {
   return (
-    <div className={styles.display}>{children}</div>
+    <div className="flex flex-col items-center gap-5 text-xl md:text-3xl text-start mb-8 w-full">{children}</div>
   )
 }

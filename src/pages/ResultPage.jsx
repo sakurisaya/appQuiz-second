@@ -21,8 +21,6 @@ useEffect(() =>{
   return (
     <>
     <Loading active={active}/>
-      <div className="text-base">- Result -</div>
-      <br />
       <Result maxQuizLen={maxQuizLen} correctNumLen={correctNumLen}/>
       <br />
       <Button to={ROUTES_PATH.DETAIL} state={state}>詳しく見る</Button>
