@@ -34,6 +34,9 @@
     &:focus{
       @apply outline-none;
     }
+    &.quizButton{
+      @apply w-[80svw] sm:w-[500px] md:w-[600px] mx-auto;
+    }
   }
 }
 
