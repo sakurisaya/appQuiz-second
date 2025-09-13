@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-export default function AnswerList({quizDate, selectedAnswers}) {
+export default function AnswerList({quizdata, selectedAnswers}) {
 
 
   return (
     <>
       <ul className="mt-[5vh] mb-[5vh] list-none text-white tracking-widest">
-      {quizDate.map((q, i) =>{
+      {quizdata.map((q, i) =>{
         const userIdx = selectedAnswers[i];
         const correctIdx = q.answerIndex;
         const isCorrect = userIdx === correctIdx;
