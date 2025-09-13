@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "../components/Button/Button";
 import Display from "../components/Display/Display";
-import { quizDateBasic, quizDateAdvance } from "../date/quiz";
+import { quizdataBasic, quizdataAdvance } from "../data/quiz";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ROUTES_PATH } from "../const";
 
@@ -9,14 +9,14 @@ export default function QuizPage() {
 
   const { state } = useLocation();
   const course = state?.course || "basic";
-  const quizDate = course === "advance" ? quizDateAdvance : quizDateBasic
+  const quizdata = course === "advance" ? quizdataAdvance : quizdataBasic
 
   const [quizIndex, setQuizIndex] = useState(0);
   const [answerLogs, setAnswerLogs] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState([]);
 
   const navigation = useNavigate();
-  const MAX_QUIZ_LEN = quizDate.length;
+  const MAX_QUIZ_LEN = quizdata.length;
 
   const optionsContainerRef = useRef(null)
 
@@ -27,7 +27,7 @@ export default function QuizPage() {
 
   useEffect(() => {
     if (selectedAnswers.length === MAX_QUIZ_LEN) {
-      const correctNum = selectedAnswers.filter((sel, i) => sel === quizDate[i].answerIndex).length;
+      const correctNum = selectedAnswers.filter((sel, i) => sel === quizdata[i].answerIndex).length;
       navigation(ROUTES_PATH.RESULT, {
         state: {
           maxQuizLen: MAX_QUIZ_LEN,
@@ -37,7 +37,7 @@ export default function QuizPage() {
         }
       });
     }
-  }, [selectedAnswers, MAX_QUIZ_LEN, quizDate,navigation]);
+  }, [selectedAnswers, MAX_QUIZ_LEN, quizdata,navigation]);
 
   useEffect(() => {
     if (optionsContainerRef.current) {
@@ -50,9 +50,9 @@ export default function QuizPage() {
 
   return (
     <>
-      {quizDate[quizIndex] && <Display> <span className="text-5xl font-semibold text-cyan-500 opacity-30 mr-2">Q{quizIndex + 1}</span>{quizDate[quizIndex].question} </Display>}
+      {quizdata[quizIndex] && <Display> <span className="text-5xl font-semibold text-cyan-500 opacity-30 mr-2">Q{quizIndex + 1}</span>{quizdata[quizIndex].question} </Display>}
       <div ref={optionsContainerRef} key={`quiz-${quizIndex}`}>
-      {quizDate[quizIndex] && quizDate[quizIndex].options.map((option, index) =>
+      {quizdata[quizIndex] && quizdata[quizIndex].options.map((option, index) =>
           <Button key={`option-${index}`} onClick={() => handleClick(index)} variant="quiz">{option}</Button>
         )}
         </div>

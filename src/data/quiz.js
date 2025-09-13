@@ -1,4 +1,4 @@
-export const quizDateBasic = [
+export const quizdataBasic = [
   {
     question: "朝のスキンケアで日焼け止めを塗る正しい順番は？",
     options: ["化粧水→乳液→日焼け止め", "化粧水→日焼け止め→乳液", "日焼け止め→化粧水→乳液", "順番は関係ない"],
@@ -120,7 +120,7 @@ export const quizDateBasic = [
     explanation: "グロスは唇にツヤを与え、立体感を出すアイテムです。"
   }
 ];
-export const quizDateAdvance = [
+export const quizdataAdvance = [
   {
     question: "紫外線防御効果の目安、SPFは主にどの紫外線を防ぐ働きを表す？",
     options: ["UVA", "UVB", "両方", "赤外線"],
